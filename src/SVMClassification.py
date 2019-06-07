@@ -5,8 +5,8 @@ from sklearn.metrics import classification_report, confusion_matrix
 
 
 class SVMClassification:
-    def __init__(self, param_grid=None):
-        p = P.Preprocessor()
+    def __init__(self, path, param_grid=None):
+        p = P.Preprocessor(path)
         features, labels = p.preprocess()
         self.features = features
         self.labels = labels

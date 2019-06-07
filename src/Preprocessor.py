@@ -5,9 +5,13 @@ import os
 from random import randint
 
 class Preprocessor:
-    def __init__(self):
-        self.files_list = files_list = glob.glob(os.path.abspath('../labelled_data/**'), recursive=True)
-        self.files_list = [individual_file_path for individual_file_path in files_list if not os.path.isdir(individual_file_path)]
+    def __init__(self, path, testing=False):
+        self.files_list = glob.glob(os.path.join(os.path.abspath(path), 'labelled_data', '**'), recursive=True)
+
+        if testing:
+            self.files_list = glob.glob(os.path.join(os.path.abspath(path), 'cleaned_images', '**'), recursive=True)
+        
+        self.files_list = [individual_file_path for individual_file_path in self.files_list if not os.path.isdir(individual_file_path)]
         self.fixed_image_width = 10
         self.fixed_image_height = 10
 

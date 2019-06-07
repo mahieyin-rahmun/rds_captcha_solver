@@ -6,11 +6,11 @@ import random
 
 
 class CropImages:
-    def __init__(self, dump_path, image_extension):
+    def __init__(self, dump_path, image_extension, path):
         self.image_extension = image_extension
         self.files_list = glob.glob(os.path.join(dump_path, f'*.{self.image_extension}'))
         self.files_list.sort(key=lambda file_path: int(file_path.rsplit('\\', 1)[1].split('.')[0]))
-        self.write_path = os.path.join(os.path.abspath('../'), 'cropped_images')
+        self.write_path = os.path.join(os.path.abspath(path), 'cropped_images')
         self.characters = string.ascii_lowercase + string.digits
 
         if not os.path.isdir(self.write_path):

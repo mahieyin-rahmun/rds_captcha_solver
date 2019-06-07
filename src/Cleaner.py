@@ -4,10 +4,10 @@ import glob
 import os
 
 class Cleaner:
-    def __init__(self, path_to_cropped_images, img_extension):
+    def __init__(self, path_to_cropped_images, img_extension, path):
         self.cropped_images_path = path_to_cropped_images
         self.image_extension = img_extension
-        self.cleaned_image_path = os.path.join(os.path.abspath('../'), 'cleaned_images')
+        self.cleaned_image_path = os.path.join(os.path.abspath(path), 'cleaned_images')
 
         if not os.path.isdir(self.cleaned_image_path):
             os.mkdir(self.cleaned_image_path)

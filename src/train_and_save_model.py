@@ -3,7 +3,7 @@ import pickle
 import os
 import time
 
-classifier = s.SVMClassification()
+classifier = s.SVMClassification('../')
 classifier.train_and_test()
 
 train = input("Press 0 to exit, 1 to train model with all data")
