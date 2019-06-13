@@ -24,6 +24,7 @@ img_cleaner.clean_images()
 p = PC.Preprocessor('./', testing=True)
 features = p.preprocess(testing=True)
 
+# model name changes, silly. needs to be updated accordingly after running code in the src folder
 with open(os.path.join(os.path.abspath('../model'), 'SVM-7-6-2019-23-54-41.sav'), 'rb') as model_file:
     model = pickle.load(model_file)
 
