@@ -4,3 +4,5 @@ cropped_images
 labelled_data
 model
 chrome_extension
+__pycache__
+*.sav
