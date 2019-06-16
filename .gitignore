@@ -3,6 +3,6 @@ cleaned_images
 cropped_images
 labelled_data
 model
-chrome_extension
+captcha_solver
 __pycache__
 *.sav
