@@ -25,7 +25,7 @@ p = PC.Preprocessor('./', testing=True)
 features = p.preprocess(testing=True)
 
 # model name changes, silly. needs to be updated accordingly after running code in the src folder
-with open(os.path.join(os.path.abspath('../model'), 'SVM-7-6-2019-23-54-41.sav'), 'rb') as model_file:
+with open(os.path.join(os.path.abspath('../model'), 'SVM-23-1-2021-19-18-34.sav'), 'rb') as model_file:
     model = pickle.load(model_file)
 
 predictions = model.predict(features)
