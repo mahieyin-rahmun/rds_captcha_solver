@@ -7,7 +7,7 @@ from crop_and_clean import crop_and_clean_images
 from preprocess import preprocess
 
 def get_text_from_captcha(img_path=None):
-    with open(os.path.join(os.path.abspath('.'), 'mysite', 'SVM-13-6-2019-11-45-2.sav'), 'rb') as model_file:
+    with open(os.path.join(os.path.abspath('.'), 'SVM-23-1-2021-19-18-34.sav'), 'rb') as model_file:
         model = pickle.load(model_file)
 
     img_parts = crop_and_clean_images(img_path)
