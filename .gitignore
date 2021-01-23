@@ -3,6 +3,8 @@ cleaned_images
 cropped_images
 labelled_data
 model
-captcha_solver
 __pycache__
 *.sav
+.vscode
+*.crx
+*.pem
